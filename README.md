@@ -12,7 +12,7 @@ A full-stack web application for intelligent location analysis and project manag
 
 ## Tech Stack
 - **Frontend:** React, Next.js, Tailwind CSS, Radix UI
-- **Backend:** Next.js API routes, Python (location processing scripts)
+- **Backend:** Next.js API routes, Python (location processing script)
 - **Database:** MySQL (see `scripts/create_database.sql`)
 - **Integrations:** Google Maps API
 
@@ -41,7 +41,7 @@ A full-stack web application for intelligent location analysis and project manag
    - Run the schema script:
      ```bash
      mysql -u <user> -p < scripts/create_database.sql
-     # or for enhanced schema:
+     # or for enhanced schema (optional, not required for main app):
      mysql -u <user> -p < scripts/create_enhanced_database.sql
      ```
    - (Optional) Seed with sample data:
@@ -79,15 +79,14 @@ A full-stack web application for intelligent location analysis and project manag
   - `/api/create-projects` - Add multiple projects via CSV
   - `/api/process-single` - Process a single project (calls Python script)
   - `/api/process-multiple` - Process multiple projects (calls Python script)
-- **Python Scripts:**
+- **Python Script:**
   - `scripts/integrated_location_processor.py` - Main logic for POI, airport, and golf course analysis
-  - `scripts/process_locations.py` - Utility for fetching highlights
 - **Database Schema:**
-  - See `scripts/create_database.sql` and `scripts/create_enhanced_database.sql` for table definitions
+  - See `scripts/create_database.sql` and (optionally) `scripts/create_enhanced_database.sql` for table definitions
 
 ## Folder Structure
 - `app/` - Next.js app, API routes, pages
-- `components/` - UI components
+- `components/` - UI components (only those used in the app are included)
 - `hooks/` - Custom React hooks
 - `lib/` - Utility functions
 - `scripts/` - Database SQL and Python processing scripts
